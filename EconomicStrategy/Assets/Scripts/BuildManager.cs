@@ -31,14 +31,23 @@ public class BuildManager : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (BuiltBy == true)
+        if (ShopPanel.active)
         {
-            transform.GetChild(0).GetComponent<Image>().color = Color.red;
+            return;
         }
         else
         {
-            transform.GetChild(0).GetComponent<Image>().color = Color.green;
+
+            if (BuiltBy == true)
+            {
+                transform.GetChild(0).GetComponent<Image>().color = Color.red;
+            }
+            else
+            {
+                transform.GetChild(0).GetComponent<Image>().color = Color.green;
+            }
         }
+      
         
     }
 

@@ -8,6 +8,8 @@ public class BuildManager : MonoBehaviour
     public bool BuiltBy;
     public GameObject ShopPanel;
     public bool Water;
+    public bool ActiveCell;
+    public bool Building;
     void Start()
     {
         
@@ -25,6 +27,7 @@ public class BuildManager : MonoBehaviour
             if (Water == false)
             {
                 ShopPanel.SetActive(true);
+                ActiveCell = true;
             }
         }
     }
@@ -54,5 +57,12 @@ public class BuildManager : MonoBehaviour
     void OnMouseExit()
     {
         transform.GetChild(0).GetComponent<Image>().color = Color.white;
+    }
+
+    public void SetBuild(GameObject build)
+    {
+        Instantiate(build).transform.position = transform.GetChild(1).transform.position;
+        Building = true;
+        ActiveCell = false;
     }
 }

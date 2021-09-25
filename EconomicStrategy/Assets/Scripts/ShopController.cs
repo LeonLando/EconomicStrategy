@@ -22,7 +22,7 @@ public class ShopController : MonoBehaviour
     [SerializeField] private GameObject ResoursePanel;
     public bool CastleBuild;
     [Header("ErrorMessage")]
-    [SerializeField] private GameObject ErrorResourses;
+    [SerializeField] private GameObject ErrorResources;
     [SerializeField] private GameObject ErrorCastle;
     [Header("BuildPriceCastle")]
     public int GoldPriceCastle;
@@ -111,7 +111,7 @@ public class ShopController : MonoBehaviour
     public void Cancel()
     {
         ErrorCastle.SetActive(false);
-        ErrorResourses.SetActive(false);
+        ErrorResources.SetActive(false);
         ShopPanel.SetActive(false);
         for (int i = 0; i < AllCell.transform.childCount; i++)
         {
@@ -130,178 +130,58 @@ public class ShopController : MonoBehaviour
             ErrorCastle.SetActive(true);
             return;
         }
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < GoldPriceCastle || ResoursePanel.GetComponent<ResourseController>().Wood < WoodPriceCastle || ResoursePanel.GetComponent<ResourseController>().Stone < StonePriceCastle)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Castle);
-                CastleBuild = true;
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceCastle;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceCastle;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceCastle;
-                break;
-            }
-        }
+        Build(Castle, GoldPriceCastle, WoodPriceCastle, StonePriceCastle);
+        CastleBuild = true;
         Cancel();
     }
 
     public void BuildBarn()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 5000)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Barn);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceBarn;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceBarn;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceBarn;
-                break;
-            }
-        }
+        Build(Barn, GoldPriceBarn, WoodPriceBarn, StonePriceBarn);
         Cancel();
     }
 
     public void BuildEnvil()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 5000)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Envil);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceEnvil;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceEnvil;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceEnvil;
-                break;
-            }
-        }
+        Build(Envil, GoldPriceEnvil, WoodPriceEnvil, StonePriceEnvil);
         Cancel();
     }
 
     public void BuildFarm()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 1500)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Farm);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceFarm;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceFarm;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceFarm;
-                break;
-            }
-        }
+        Build(Farm, GoldPriceFarm, WoodPriceFarm, StonePriceFarm);
         Cancel();
     }
 
     public void BuildHouse()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 2000)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(House);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceHouse;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceHouse;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceHouse;
-                break;
-            }
-        }
+        Build(House, GoldPriceHouse, WoodPriceHouse, StonePriceHouse);
         Cancel();
     }
 
     public void BuildKitchen()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 4500)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Kitchen);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceKitchen;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceKitchen;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceKitchen;
-                break;
-            }
-        }
+        Build(Kitchen, GoldPriceKitchen, WoodPriceKitchen, StonePriceKitchen);
         Cancel(); 
     }
 
     public void BuildMine()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 3000)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Mine);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceMine;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceMine;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceMine;
-                break;
-            }
-        }
+        Build(Mine, GoldPriceMine, WoodPriceMine, StonePriceMine);
         Cancel();
     }
 
     public void BuildTent()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 500)
-        {
-            ErrorResourses.SetActive(true);
-            return;
-        }
-        for (int i = 0; i < AllCell.transform.childCount; i++)
-        {
-            if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
-            {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Tent);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceTent;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceTent;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceTent;
-                break;
-            }
-        }
+        Build(Tent, GoldPriceTent, WoodPriceTent, StonePriceTent);
         Cancel();
     }
 
     public void BuildTower()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 5000) //Особый план
+        if (ResoursePanel.GetComponent<ResourceController>().Gold < 5000) //Особый план
         {
-            ErrorResourses.SetActive(true);
+            ErrorResources.SetActive(true);
             return;
         }
         for (int i = 0; i < AllCell.transform.childCount; i++)
@@ -309,9 +189,9 @@ public class ShopController : MonoBehaviour
             if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
             {
                 AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Tower);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceTower;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceTower;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceTower;
+                ResoursePanel.GetComponent<ResourceController>().Gold -= GoldPriceTower;
+                ResoursePanel.GetComponent<ResourceController>().Wood -= WoodPriceTower;
+                ResoursePanel.GetComponent<ResourceController>().Stone -= StonePriceTower;
                 break;
             }
         }
@@ -320,24 +200,27 @@ public class ShopController : MonoBehaviour
 
     public void BuildWell()
     {
-        if (ResoursePanel.GetComponent<ResourseController>().Gold < 300)
+        Build(Well, GoldPriceWell, WoodPriceWell, StonePriceWell);
+        Cancel();
+    }
+
+    public void Build(GameObject Construction, int GoldPrice, int WoodPrice, int StonePrice)
+    {
+        if (ResoursePanel.GetComponent<ResourceController>().Gold < GoldPrice || ResoursePanel.GetComponent<ResourceController>().Wood < WoodPrice || ResoursePanel.GetComponent<ResourceController>().Stone < StonePrice)
         {
-            ErrorResourses.SetActive(true);
+            ErrorResources.SetActive(true);
             return;
         }
         for (int i = 0; i < AllCell.transform.childCount; i++)
         {
             if (AllCell.transform.GetChild(i).GetComponent<BuildManager>().ActiveCell == true && AllCell.transform.GetChild(i).GetComponent<BuildManager>().Building == false)
             {
-                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Well);
-                ResoursePanel.GetComponent<ResourseController>().Gold -= GoldPriceWell;
-                ResoursePanel.GetComponent<ResourseController>().Wood -= WoodPriceWell;
-                ResoursePanel.GetComponent<ResourseController>().Stone -= StonePriceWell;
+                AllCell.transform.GetChild(i).GetComponent<BuildManager>().SetBuild(Construction);
+                ResoursePanel.GetComponent<ResourceController>().Gold -= GoldPrice;
+                ResoursePanel.GetComponent<ResourceController>().Wood -= WoodPrice;
+                ResoursePanel.GetComponent<ResourceController>().Stone -= StonePrice;
                 break;
             }
         }
-        Cancel();
     }
-
-    
 }

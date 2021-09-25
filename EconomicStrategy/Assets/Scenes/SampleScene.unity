@@ -205,8 +205,6 @@ RectTransform:
   - {fileID: 597030958}
   - {fileID: 1212148660}
   - {fileID: 6136609235251055603}
-  - {fileID: 792885328}
-  - {fileID: 1131870416}
   m_Father: {fileID: 1213690414}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -293,7 +291,7 @@ MonoBehaviour:
   AllCell: {fileID: 85232809}
   ResoursePanel: {fileID: 2112078878}
   CastleBuild: 0
-  ErrorResourses: {fileID: 792885327}
+  ErrorResources: {fileID: 792885327}
   ErrorCastle: {fileID: 1131870415}
   GoldPriceCastle: 25000
   WoodPriceCastle: 1000
@@ -570,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16, y: -25}
+  m_AnchoredPosition: {x: 16, y: -40.166992}
   m_SizeDelta: {x: -25.742249, y: -80.333984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85232811
@@ -3325,8 +3323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260, y: -36.5}
-  m_SizeDelta: {x: 502.05328, y: 72.91809}
+  m_AnchoredPosition: {x: 273.4, y: -36.5}
+  m_SizeDelta: {x: 528.9236, y: 72.91809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700833739 stripped
 MonoBehaviour:
@@ -4161,7 +4159,7 @@ GameObject:
   - component: {fileID: 792885330}
   - component: {fileID: 792885329}
   m_Layer: 5
-  m_Name: ResourseErrorPanel
+  m_Name: ResourceErrorPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4174,18 +4172,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792885327}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -137.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1232784218}
-  m_Father: {fileID: 70748633}
-  m_RootOrder: 11
+  m_Father: {fileID: 1213690414}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38456914}
   m_AnchorMax: {x: 0.657378, y: 1}
-  m_AnchoredPosition: {x: 72, y: -58}
-  m_SizeDelta: {x: -14.830444, y: -16.300964}
+  m_AnchoredPosition: {x: 108.543335, y: -140.9321}
+  m_SizeDelta: {x: -93.66214, y: -201.71988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792885329
 MonoBehaviour:
@@ -6000,18 +5998,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131870415}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -137.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1922569045}
-  m_Father: {fileID: 70748633}
-  m_RootOrder: 12
+  m_Father: {fileID: 1213690414}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38456914}
   m_AnchorMax: {x: 0.657378, y: 1}
-  m_AnchoredPosition: {x: 72, y: -58}
-  m_SizeDelta: {x: -14.830444, y: -16.300964}
+  m_AnchoredPosition: {x: 108.543335, y: -140.9321}
+  m_SizeDelta: {x: -93.66214, y: -201.71988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131870417
 MonoBehaviour:
@@ -6507,6 +6505,8 @@ RectTransform:
   m_Children:
   - {fileID: 85232810}
   - {fileID: 70748633}
+  - {fileID: 1131870416}
+  - {fileID: 792885328}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6613,7 +6613,7 @@ GameObject:
   - component: {fileID: 1236182206}
   - component: {fileID: 1236182205}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: 'ResourceCanvas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11169,8 +11169,8 @@ GameObject:
   - component: {fileID: 2112078880}
   - component: {fileID: 2112078879}
   m_Layer: 0
-  m_Name: ResourseController
-  m_TagString: Untagged
+  m_Name: ResourceController
+  m_TagString: ResourceController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11191,12 +11191,12 @@ MonoBehaviour:
   Resident: 0
   MaxResident: 0
   Gold: 35000
-  Food: 0
-  MaxFood: 5000
+  Food: 5000
+  MaxFood: 30000
   Wood: 5000
-  MaxWood: 5000
+  MaxWood: 30000
   Stone: 5000
-  MaxStone: 5000
+  MaxStone: 30000
   Building: 0
   GoldMessage: {fileID: 2106084364}
   StoneMessage: {fileID: 357750113}

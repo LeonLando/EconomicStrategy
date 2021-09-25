@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5726106570415583118}
   - component: {fileID: 5726106570416713038}
   - component: {fileID: 5726106570420739374}
+  - component: {fileID: -1653105264738568576}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -144,6 +145,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300010, guid: 950a899a61407f04692504e9f4a96075, type: 3}
+--- !u!114 &-1653105264738568576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5726106570414453646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047e8498d27bcf44aa8b1347a8ddc333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &136090675923952146
 PrefabInstance:
   m_ObjectHideFlags: 0

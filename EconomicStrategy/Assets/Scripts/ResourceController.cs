@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResourseController : MonoBehaviour
+public class ResourceController : MonoBehaviour
 {
     public Text ResoursesText;
     [Header("Resourses")]
@@ -27,6 +27,15 @@ public class ResourseController : MonoBehaviour
     {
         ResoursesText.text = "Жителей: " + Resident + "/" + MaxResident + "   Золото: " + Gold + "   Продуктов: " + Food + "/" + MaxFood +
             "\r\nДерево: " + Wood + "/" + MaxWood + "   Камней: " + Stone + "/" + MaxStone + "   Построений: " + Building;
+        if (Food < 0)
+        {
+            Food = 0;
+        }
+        if (Resident < 0)
+        {
+            Resident = 0;
+        }
+        
         if (Gold < 2000)
         {
             GoldMessage.SetActive(true);

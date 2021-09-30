@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7470864758364719243}
   - component: {fileID: 7481664042181700969}
   - component: {fileID: 7489590809130312027}
+  - component: {fileID: -1964946828985995411}
   m_Layer: 0
   m_Name: Envil
   m_TagString: Untagged
@@ -160,6 +161,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-1964946828985995411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468962238896165299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854d134173f98cb438c45a7dbc9d309e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerMaxTime: 10
+  TimerCurrentTime: 0
 --- !u!1 &7469070243785151919
 GameObject:
   m_ObjectHideFlags: 0

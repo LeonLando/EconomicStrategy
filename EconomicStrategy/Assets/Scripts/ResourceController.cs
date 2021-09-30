@@ -17,16 +17,19 @@ public class ResourceController : MonoBehaviour
     public int Stone;
     public int MaxStone;
     public int Building;
+    public int Weapons;
+    public bool ResidentsHaveFood;
     [Header("ErrorMessage")]
     [SerializeField] private GameObject GoldMessage;
     [SerializeField] private GameObject StoneMessage;
     [SerializeField] private GameObject WoodMessage;
+    [SerializeField] private GameObject WeaponMessage;
 
 
     void Update()
     {
         ResoursesText.text = "Жителей: " + Resident + "/" + MaxResident + "   Золото: " + Gold + "   Продуктов: " + Food + "/" + MaxFood +
-            "\r\nДерево: " + Wood + "/" + MaxWood + "   Камней: " + Stone + "/" + MaxStone + "   Построений: " + Building;
+            "\r\nДерево: " + Wood + "/" + MaxWood + "   Камней: " + Stone + "/" + MaxStone + "   Построений: " + Building + "   Оружия: " + Weapons;
         if (Food < 0)
         {
             Food = 0;

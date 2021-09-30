@@ -15,7 +15,7 @@ public class ShopController : MonoBehaviour
     public GameObject Mine;
     public GameObject Tent;
     public GameObject Tower;
-    public GameObject Well;
+    public GameObject Saw;
     [Header("Other")]
     [SerializeField] private GameObject ShopPanel;
     [SerializeField] private GameObject AllCell;
@@ -73,13 +73,13 @@ public class ShopController : MonoBehaviour
     public Text GoldTextBarn;
     public Text WoodTextBarn;
     public Text StoneTextBarn;
-    [Header("BuildPriceWell")]
-    public int GoldPriceWell;
-    public int WoodPriceWell;
-    public int StonePriceWell;
-    public Text GoldTextWell;
-    public Text WoodTextWell;
-    public Text StoneTextWell;
+    [Header("BuildPriceSaw")]
+    public int GoldPriceSaw;
+    public int WoodPriceSaw;
+    public int StonePriceSaw;
+    public Text GoldTextSaw;
+    public Text WoodTextSaw;
+    public Text StoneTextSaw;
     [Header("BuildPriceEnvil")]
     public int GoldPriceEnvil;
     public int WoodPriceEnvil;
@@ -198,9 +198,9 @@ public class ShopController : MonoBehaviour
         Cancel();
     }
 
-    public void BuildWell()
+    public void BuildSaw()
     {
-        Build(Well, GoldPriceWell, WoodPriceWell, StonePriceWell);
+        Build(Saw, GoldPriceSaw, WoodPriceSaw, StonePriceSaw);
         Cancel();
     }
 

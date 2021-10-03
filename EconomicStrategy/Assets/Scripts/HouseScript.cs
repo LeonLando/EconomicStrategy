@@ -98,4 +98,14 @@ public class HouseScript : MonoBehaviour
             Resources.GetComponent<ResourceController>().Resident -= 1;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.tag == "Flag")
+        {
+            MaxPersonInHouse += 3;
+            Tax += 10;
+        }
+    }
 }

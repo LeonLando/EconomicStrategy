@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2678375693983971719}
   - component: {fileID: 202512214180269389}
   - component: {fileID: -612012459572658778}
+  - component: {fileID: 7023369064972654778}
+  - component: {fileID: 7611515359786934712}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -95,3 +97,32 @@ MonoBehaviour:
   AdditionalWood: 5000
   AdditionalStone: 5000
   AdditionalFood: 10000
+--- !u!65 &7023369064972654778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859858798253649048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.010612, y: 20.607403, z: 10.0703535}
+  m_Center: {x: 0.4830081, y: -0.4793911, z: 5.0351768}
+--- !u!54 &7611515359786934712
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859858798253649048}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

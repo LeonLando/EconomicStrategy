@@ -3,7 +3,55 @@ guid: 58c9c3b9166e91a46ae82353cc3c663c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Castle: {fileID: 5726106570414453646, guid: 69a2c03bd22b501409cdf19f24c722a4,
+      type: 3}
+  - Barn: {fileID: 1859858798253649048, guid: 139756c6b89a18a4a96a14034300bea1, type: 3}
+  - Envil: {fileID: 7468962238896165299, guid: 7ac5cdc18a6c0574bba97dd6217059c4, type: 3}
+  - Farm: {fileID: 5075858455827183169, guid: 8dc1ef79abe75914fa90c9b3dcd5b43e, type: 3}
+  - House: {fileID: 8919035492046694726, guid: 1716ae1cc5d27c749921ba33c3da11b9, type: 3}
+  - Kitchen: {fileID: 6579217393444641358, guid: 781641e499fa3f84ca0e40ef72f30232,
+      type: 3}
+  - Mine: {fileID: 8320055359931782105, guid: 77499d6c0829f574fbea04c5cce7559d, type: 3}
+  - Tent: {fileID: 2951765971892208408, guid: a2896a11d06d70748b54c2f6f03e793d, type: 3}
+  - Tower: {fileID: 7750215604190269483, guid: 86cb6aa0d7b7be54d9f6d847960058d8, type: 3}
+  - Saw: {fileID: 6421351858815904148, guid: 824bb13fa42715c47ae0abcd854315a4, type: 3}
+  - ShopPanel: {instanceID: 0}
+  - AllCell: {instanceID: 0}
+  - ResoursePanel: {instanceID: 0}
+  - ErrorResources: {instanceID: 0}
+  - ErrorCastle: {instanceID: 0}
+  - ErrorCastle2: {instanceID: 0}
+  - GoldTextCastle: {instanceID: 0}
+  - WoodTextCastle: {instanceID: 0}
+  - StoneTextCastle: {instanceID: 0}
+  - GoldTextTower: {instanceID: 0}
+  - WoodTextTower: {instanceID: 0}
+  - StoneTextTower: {instanceID: 0}
+  - GoldTextFarm: {instanceID: 0}
+  - WoodTextFarm: {instanceID: 0}
+  - StoneTextFarm: {instanceID: 0}
+  - GoldTextMine: {instanceID: 0}
+  - WoodTextMine: {instanceID: 0}
+  - StoneTextMine: {instanceID: 0}
+  - GoldTextHouse: {instanceID: 0}
+  - WoodTextHouse: {instanceID: 0}
+  - StoneTextHouse: {instanceID: 0}
+  - GoldTextTent: {instanceID: 0}
+  - WoodTextTent: {instanceID: 0}
+  - StoneTextTent: {instanceID: 0}
+  - GoldTextBarn: {instanceID: 0}
+  - WoodTextBarn: {instanceID: 0}
+  - StoneTextBarn: {instanceID: 0}
+  - GoldTextSaw: {instanceID: 0}
+  - WoodTextSaw: {instanceID: 0}
+  - StoneTextSaw: {instanceID: 0}
+  - GoldTextEnvil: {instanceID: 0}
+  - WoodTextEnvil: {instanceID: 0}
+  - StoneTextEnvil: {instanceID: 0}
+  - GoldTextKitchen: {instanceID: 0}
+  - WoodTextKitchen: {instanceID: 0}
+  - StoneTextKitchen: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

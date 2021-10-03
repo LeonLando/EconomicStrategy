@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour
 {
-    public bool BuiltBy;
     public GameObject ShopPanel;
+    public bool Flag;
     public bool Water;
     public bool ActiveCell;
     public bool Building;
@@ -22,7 +22,7 @@ public class BuildManager : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && transform.GetChild(0).GetComponent<Image>().color == Color.green)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (transform.GetChild(0).GetComponent<Image>().color == Color.green || transform.GetChild(0).GetComponent<Image>().color == Color.yellow))
         {
             if (Water == false)
             {
@@ -41,9 +41,13 @@ public class BuildManager : MonoBehaviour
         else
         {
 
-            if (BuiltBy == true)
+            if ((Building == true && Flag == true) || Water == true)
             {
                 transform.GetChild(0).GetComponent<Image>().color = Color.red;
+            }
+            else if (Building == true)
+            {
+                transform.GetChild(0).GetComponent<Image>().color = Color.yellow;
             }
             else
             {
@@ -62,6 +66,12 @@ public class BuildManager : MonoBehaviour
     public void SetBuild(GameObject build)
     {
         Instantiate(build).transform.position = transform.GetChild(1).transform.position;
+        Building = true;
+        ActiveCell = false;
+    }
+    public void SetBuildFlag(GameObject build)
+    {
+        Instantiate(build).transform.position = transform.GetChild(2).transform.position;
         Building = true;
         ActiveCell = false;
     }

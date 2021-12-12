@@ -106,15 +106,13 @@ public class ShopController : MonoBehaviour
 
     void Start()
     {
-        
+        GetPrices();
     }
 
    
     void Update()
     {
-        GoldTextCastle.text = GoldPriceCastle.ToString();
-        WoodTextCastle.text = WoodPriceCastle.ToString();
-        StoneTextCastle.text = StonePriceCastle.ToString();
+        
     }
 
     public void Cancel()
@@ -283,5 +281,43 @@ public class ShopController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void GetPrices()
+    {
+        GoldTextCastle.text = GoldPriceCastle.ToString();
+        WoodTextCastle.text = WoodPriceCastle.ToString();
+        StoneTextCastle.text = StonePriceCastle.ToString();
+        GoldTextTower.text = GoldPriceTower.ToString();
+        WoodTextTower.text = WoodPriceTower.ToString();
+        StoneTextTower.text = StonePriceTower.ToString();
+        GoldTextFarm.text = GoldPriceFarm.ToString();
+        WoodTextFarm.text = WoodPriceFarm.ToString();
+        StoneTextFarm.text = StonePriceFarm.ToString();
+        GoldTextMine.text = GoldPriceMine.ToString();
+        WoodTextMine.text = WoodPriceMine.ToString();
+        StoneTextMine.text = StonePriceMine.ToString();
+        GoldTextHouse.text = GoldPriceHouse.ToString();
+        WoodTextHouse.text = WoodPriceHouse.ToString();
+        StoneTextHouse.text = StonePriceHouse.ToString();
+        GoldTextTent.text = GoldPriceTent.ToString();
+        WoodTextTent.text = WoodPriceTent.ToString();
+        StoneTextTent.text = StonePriceTent.ToString();
+        GoldTextBarn.text = GoldPriceBarn.ToString();
+        WoodTextBarn.text = WoodPriceBarn.ToString();
+        StoneTextBarn.text = StonePriceBarn.ToString();
+        GoldTextSaw.text = GoldPriceSaw.ToString();
+        WoodTextSaw.text = WoodPriceSaw.ToString();
+        StoneTextSaw.text = StonePriceSaw.ToString();
+        GoldTextEnvil.text = GoldPriceEnvil.ToString();
+        WoodTextEnvil.text = WoodPriceEnvil.ToString();
+        StoneTextEnvil.text = StonePriceEnvil.ToString();
+        GoldTextKitchen.text = GoldPriceKitchen.ToString();
+        WoodTextKitchen.text = WoodPriceKitchen.ToString();
+        StoneTextKitchen.text = StonePriceKitchen.ToString();
+        GoldTextFlag.text = GoldPriceFlag.ToString();
+        WoodTextFlag.text = WoodPriceFlag.ToString();
+        StoneTextFlag.text = StonePriceFlag.ToString(); 
+
     }
 }

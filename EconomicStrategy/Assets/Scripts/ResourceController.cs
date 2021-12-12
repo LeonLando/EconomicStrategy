@@ -24,6 +24,7 @@ public class ResourceController : MonoBehaviour
     [SerializeField] private GameObject StoneMessage;
     [SerializeField] private GameObject WoodMessage;
     [SerializeField] private GameObject WeaponMessage;
+    [SerializeField] private GameObject FoodMessage;
 
 
     void Update()
@@ -39,7 +40,7 @@ public class ResourceController : MonoBehaviour
             Resident = 0;
         }
         
-        if (Gold < 2000)
+        if (Gold < 20)
         {
             GoldMessage.SetActive(true);
         }
@@ -48,7 +49,7 @@ public class ResourceController : MonoBehaviour
             GoldMessage.SetActive(false);
         }
 
-        if (Wood < 1000)
+        if (Wood < 10)
         {
             WoodMessage.SetActive(true);
         }
@@ -57,13 +58,22 @@ public class ResourceController : MonoBehaviour
             WoodMessage.SetActive(false);
         }
 
-        if (Stone < 1000)
+        if (Stone < 10)
         {
             StoneMessage.SetActive(true);
         }
         else
         {
             StoneMessage.SetActive(false);
+        }
+
+        if (Food < Resident)
+        {
+            GoldMessage.SetActive(true);
+        }
+        else
+        {
+            GoldMessage.SetActive(false);
         }
     }
 }

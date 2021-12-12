@@ -17,12 +17,12 @@ public class HouseScript : MonoBehaviour
     public int TaxAdd;
     float TaxTime;
 
-    GameObject Resources;
+    ResourceController Resources;
     void Start()
     {
-        Resources = GameObject.FindGameObjectWithTag("ResourceController");
-        Resources.GetComponent<ResourceController>().MaxResident += MaxPersonInHouse;
-        Resources.GetComponent<ResourceController>().Building += 1;
+        Resources = GameObject.FindGameObjectWithTag("ResourceController").GetComponent<ResourceController>();
+        Resources.MaxResident += MaxPersonInHouse;
+        Resources.Building += 1;
     }
 
     
